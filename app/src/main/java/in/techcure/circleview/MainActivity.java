@@ -7,10 +7,23 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+	CircleView circleView;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		circleView=(CircleView)findViewById(R.id.cv);
+
+
+
+		circleView.setTitleText("Custom Title");
+		circleView.setSubtitleText("my subtitle");
+		circleView.setTitleSize(20);
+		circleView.setStrokeColor(getResources().getColor(R.color.green));
+		circleView.setFillColor(getResources().getColor(R.color.green_dark));
+		circleView.setBackgroundColor(getResources().getColor(R.color.gray));
 	}
 
 	@Override
